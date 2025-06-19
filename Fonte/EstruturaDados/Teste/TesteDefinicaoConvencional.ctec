@@ -1,6 +1,0 @@
-#Inclua <Console/ExibaFormatado.ctec>
-
-Inteiro Início(){
-	
-	Retorne 0;
-}
