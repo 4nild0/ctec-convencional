@@ -1,0 +1,78 @@
+#SeNãoDefinido TIPOS_INTEIROS_PADRONIZADOS
+#Defina TIPOS_INTEIROS_PADRONIZADOS
+
+// ============================================================================
+// Tipos Inteiros com Sinal (Bilateral)
+// ============================================================================
+#Defina INTEIRO_8_BILATERAL_MÍNIMO     (-128)
+#Defina INTEIRO_8_BILATERAL_MÁXIMO     127
+
+#Defina INTEIRO_16_BILATERAL_MÍNIMO    (-32768)
+#Defina INTEIRO_16_BILATERAL_MÁXIMO    32767
+
+#Defina INTEIRO_32_BILATERAL_MÍNIMO    (-2147483647 - 1)
+#Defina INTEIRO_32_BILATERAL_MÁXIMO    2147483647
+
+#Defina INTEIRO_64_BILATERAL_MÍNIMO    (-9223372036854775807LL - 1)
+#Defina INTEIRO_64_BILATERAL_MÁXIMO    9223372036854775807LL
+
+// ============================================================================
+// Tipos Inteiros Sem Sinal (Naturais)
+// ============================================================================
+#Defina INTEIRO_NATURAL_8_BILATERAL_MÁXIMO   0xFF
+#Defina INTEIRO_NATURAL_16_BILATERAL_MÁXIMO  0xFFFF
+#Defina INTEIRO_NATURAL_32_BILATERAL_MÁXIMO  0xFFFFFFFF
+#Defina INTEIRO_NATURAL_64_BILATERAL_MÁXIMO  0xFFFFFFFFFFFFFFFFULL
+
+// ============================================================================
+// Aliases para Grupos de Tipos Específicos
+// ============================================================================
+
+// "Menores" (Menor tamanho possível com sinal)
+#Defina INTEIRO_MENOR_8_MÍNIMO     INTEIRO_8_BILATERAL_MÍNIMO
+#Defina INTEIRO_MENOR_8_MÁXIMO     INTEIRO_8_BILATERAL_MÁXIMO
+
+#Defina INTEIRO_MENOR_16_MÍNIMO    INTEIRO_16_BILATERAL_MÍNIMO
+#Defina INTEIRO_MENOR_16_MÁXIMO    INTEIRO_16_BILATERAL_MÁXIMO
+
+#Defina INTEIRO_MENOR_32_MÍNIMO    INTEIRO_32_BILATERAL_MÍNIMO
+#Defina INTEIRO_MENOR_32_MÁXIMO    INTEIRO_32_BILATERAL_MÁXIMO
+
+#Defina INTEIRO_MENOR_64_MÍNIMO    INTEIRO_64_BILATERAL_MÍNIMO
+#Defina INTEIRO_MENOR_64_MÁXIMO    INTEIRO_64_BILATERAL_MÁXIMO
+
+// Naturais Menores (Sem sinal)
+#Defina INTEIRO_NATURAL_MENOR_8_MÁXIMO   INTEIRO_NATURAL_8_BILATERAL_MÁXIMO
+#Defina INTEIRO_NATURAL_MENOR_16_MÁXIMO  INTEIRO_NATURAL_16_BILATERAL_MÁXIMO
+#Defina INTEIRO_NATURAL_MENOR_32_MÁXIMO  INTEIRO_NATURAL_32_BILATERAL_MÁXIMO
+#Defina INTEIRO_NATURAL_MENOR_64_MÁXIMO  INTEIRO_NATURAL_64_BILATERAL_MÁXIMO
+
+// Tipos Velozes (com otimizações possíveis para performance)
+#Defina INTEIRO_VELOZ_8_MÍNIMO     INTEIRO_8_BILATERAL_MÍNIMO
+#Defina INTEIRO_VELOZ_8_MÁXIMO     INTEIRO_8_BILATERAL_MÁXIMO
+
+#Defina INTEIRO_VELOZ_16_MÍNIMO    INTEIRO_16_BILATERAL_MÍNIMO
+#Defina INTEIRO_VELOZ_16_MÁXIMO    INTEIRO_16_BILATERAL_MÁXIMO
+
+#Defina INTEIRO_VELOZ_32_MÍNIMO    INTEIRO_32_BILATERAL_MÍNIMO
+#Defina INTEIRO_VELOZ_32_MÁXIMO    INTEIRO_32_BILATERAL_MÁXIMO
+
+#Defina INTEIRO_VELOZ_64_MÍNIMO    INTEIRO_64_BILATERAL_MÍNIMO
+#Defina INTEIRO_VELOZ_64_MÁXIMO    INTEIRO_64_BILATERAL_MÁXIMO
+
+// Tipos Atômicos (para uso em operações atômicas/filamento-seguro)
+#Defina ATÔMICO_BILATERAL_MÍNIMO   INTEIRO_32_BILATERAL_MÍNIMO
+#Defina ATÔMICO_BILATERAL_MÁXIMO   INTEIRO_32_BILATERAL_MÁXIMO
+
+// ============================================================================
+// Definição de TAMANHO MÁXIMO com base na arquitetura
+// ============================================================================
+#SeNãoDefinido TAMANHO_MÁXIMO
+  #SeDefinido WINDOWS_64_BITS
+    #Defina TAMANHO_MÁXIMO INTEIRO_NATURAL_64_BILATERAL_MÁXIMO
+  #Senão
+    #Defina TAMANHO_MÁXIMO INTEIRO_NATURAL_32_BILATERAL_MÁXIMO
+  #FimSe
+#FimSe
+
+#FimSe
