@@ -1,0 +1,15 @@
+#SeNãoDefinido DEFINICAO_CONVENCIONAL
+#Defina	DEFINICAO_CONVENCIONAL
+
+Tipo CARACTERE_UNICODE              CaractereUnicode;
+Tipo DIFERENÇA_ENTRE_PONTEIROS      DiferençaEntrePonteiros;
+Tipo TIPO_TAMANHO                   Tamanho;
+Tipo DIFERENÇA_ENTRE_PONTEIROS      TamanhoBilateral;
+
+#SeNãoDefinido NULO
+#Defina NULO ((Vazio*)0)
+#FimSe
+
+#Defina DeslocamentoDe(tipo, campo) ((Tamanho)&((tipo *)0)->campo)
+
+#FimSe 
