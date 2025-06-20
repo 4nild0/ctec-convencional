@@ -1,8 +1,8 @@
-# 1. Licença Livre Brasileira (LLB)
+# Licença Livre Brasileira (LLB)
 
 Esta Licença Livre Brasileira (LLB) tem por objetivo conceder permissões amplas de uso de uma obra, conforme a legislação brasileira vigente, em especial a Lei nº 9.610, de 19 de fevereiro de 1998 (Lei de Direitos Autorais), e o Código Civil Brasileiro (Lei nº 10.406, de 10 de janeiro de 2002).
 
-## 1.1 Concessão de Permissões
+## 1 Concessão de Permissões
 
 O autor da obra, ao aplicar esta licença, concede, a qualquer pessoa, a título gratuito, mundial e perpétuo, uma licença não exclusiva e sublicenciável para:
 
@@ -13,22 +13,22 @@ O autor da obra, ao aplicar esta licença, concede, a qualquer pessoa, a título
 - Executar ou exibir a obra publicamente;
 - Explorar comercialmente a obra.
 
-## 1.2 Manutenção dos Direitos Autorais
+## 2 Manutenção dos Direitos Autorais
 
 Esta licença não implica em cessão nem renúncia aos direitos autorais. O autor mantém a titularidade dos direitos patrimoniais, nos termos da Lei nº 9.610/1998.
 
-## 1.3 Direitos Morais
+## 3 Direitos Morais
 
 Nos termos do artigo 24 da Lei nº 9.610/1998, os direitos morais do autor são inalienáveis e irrenunciáveis. Esta licença não prejudica o exercício de tais direitos, incluindo, entre outros:
 
 - O direito de reivindicar a autoria da obra;
 - O direito à integridade da obra, opondo-se a modificações que possam prejudicar sua honra ou reputação.
 
-## 1.4 Reconhecimento (Opcional)
+## 4 Reconhecimento (Opcional)
 
 Embora não seja exigido, o reconhecimento ao autor original é incentivado. Quando possível e razoável, recomenda-se a menção ao nome do autor ou a inclusão de hiperlink para a obra original. A ausência de tal reconhecimento não limita os direitos concedidos.
 
-## 1.5 Isenção de Garantias e Responsabilidades
+## 5 Isenção de Garantias e Responsabilidades
 
 A obra é fornecida "no estado em que se encontra", sem garantias expressas ou implícitas, incluindo, mas não se limitando a:
 
@@ -38,7 +38,7 @@ A obra é fornecida "no estado em que se encontra", sem garantias expressas ou i
 
 Nos termos do artigo 927 do Código Civil Brasileiro (Lei nº 10.406/2002), o autor não será responsabilizado por danos diretos, indiretos, incidentais ou consequenciais decorrentes do uso da obra.
 
-## 1.6 Responsabilidade do Usuário
+## 6 Responsabilidade do Usuário
 
 O usuário da obra assume total responsabilidade por seu uso, sendo o único incumbido de garantir conformidade com a legislação vigente, incluindo, mas não se limitando a:
 
@@ -46,7 +46,7 @@ O usuário da obra assume total responsabilidade por seu uso, sendo o único inc
 - Legislação de propriedade intelectual;
 - Direitos de terceiros.
 
-## 1.7 Aplicação
+## 7 Aplicação
 
 Esta licença é aplicável a qualquer tipo de obra protegida por direitos autorais, incluindo, mas não se limitando a:
 
@@ -58,20 +58,20 @@ Esta licença é aplicável a qualquer tipo de obra protegida por direitos autor
 - Obras literárias, artísticas e audiovisuais;
 - Materiais digitais em geral.
 
-## 1.8 Lei Aplicável
+## 8 Lei Aplicável
 
 Esta licença será interpretada e executada de acordo com as leis da República Federativa do Brasil, especialmente:
 
 - Lei nº 9.610/1998 (Lei de Direitos Autorais);
 - Lei nº 10.406/2002 (Código Civil Brasileiro).
 
-## 1.9 Disposições Finais
+## 9 Disposições Finais
 
 Esta licença não possui reconhecimento oficial por qualquer órgão governamental, entidade jurídica ou normativa. Recomenda-se a consulta a profissional jurídico habilitado para correta interpretação e aplicação do presente instrumento.
 
 ---
 
-# 2. Referências
+# Referências
 
 BRASIL. **Lei nº 9.610, de 19 de fevereiro de 1998**. Altera, atualiza e consolida a legislação sobre direitos autorais e dá outras providências. Diário Oficial da União: seção 1, Brasília, DF, 20 fev. 1998. Disponível em: <https://www.planalto.gov.br/ccivil_03/leis/l9610.htm>. Acesso em: 19 jun. 2025.
 
