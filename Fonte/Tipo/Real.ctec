@@ -26,7 +26,7 @@
 #Defina MANTISSA_DÍGITOS_DUPLO 		53
 
 // Longo Duplo
-#Se Definido __i386__ || Definido __x86_64__
+#Se Definido i386 || Definido x86_64
 #Defina DÍGITOS_LONGO_DUPLO 		18
 #Defina EXPOENTE_MÍNIMO_LONGO_DUPLO 	(-16381)
 #Defina EXPOENTE_MÍNIMO_10_LONGO_DUPLO 	(-4931)

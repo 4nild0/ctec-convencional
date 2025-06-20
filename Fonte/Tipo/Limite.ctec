@@ -20,6 +20,8 @@
 #Defina MÁXIMO_INTEIRO_NATURAL		4294967295
 
 // Limites de Longo
+// Nota: Em sistemas tratam Longo com tamanho diferente, por isso a expecificação
+// A fazer: Adicionar Especificações
 #Defina MÍNIMO_LONGO                    -2147483648
 #Defina MÁXIMO_LONGO			2147483647
 #Defina MÁXIMO_LONGO_NATURAL		4294967295

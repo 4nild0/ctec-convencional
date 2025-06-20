@@ -1,0 +1,21 @@
+#SeNãoDefinido	MEMÓRIA_MACROS
+#Defina MEMÓRIA_MACROS
+
+#SeNãoDefinido TIPO_TAMANHO
+#Inclua <Memoria/Tamanho.ctec>
+#FimSe
+
+#SeNãoDefinido Nulo
+#Inclua <EstruturaDados/Nulo.ctec>
+#FimSe
+
+Vazio* memóriaCalculeDistanciaPropriedade(estrutura, propriedade) ((Tamanho)&((estrutura *)0)->propriedade);
+Vazio* memóriaCopieValores(Vazio *destino, Constante Vazio *fonte, Inteiro valor, tamanho contadorMáximo);
+
+Caractere* memóriaMovaValores(Vazio *destino, Constante Vazio *fonte, Tamanho tamanho);
+
+Inteiro memóriaCompare(Constante Vazio *destino, Constante Vazio *fonte, Tamanho tamanho);
+
+Vazio *memóriaProcurePrimeiraOcorrênciaCaractere(Constante Vazio *texto, Inteiro caractere, Tamanho tamanho);
+
+#FimSe

@@ -1,0 +1,5 @@
+#SeNãoDefinido TAMANHO
+#Defina TAMANHO
+Tipo TAMANHO Tamanho;
+Tipo DIFERENÇA_ENTRE_PONTEIROS TamanhoBilateral;
+#FimSe

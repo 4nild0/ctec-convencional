@@ -1,0 +1,25 @@
+#SeNãoDefinido DENÚNCIA
+#Defina DENÚNCIA
+
+#SeNãoDefinido TEXTO_UNICODE
+  #Defina TEXTO_UNICODE
+  Tipo Constante CaractereUnicode* TextoUnicode
+#FimSe
+
+#SeNãoDefinido ENCERRAMENTO_EXECUÇÃO
+  #Defina ENCERRAMENTO_EXECUÇÃO
+  Vazio depuraçãoSaia(Inteiro código) SEM_RETORNO;
+#FimSe
+
+#Diretiva push_macro("abortar")
+#Esqueça abortar
+Vazio depuraçãoAborte(Vazio);
+#Diretiva pop_macro("abortar")
+
+#SeDefinido PROTOCOLO_DEPURAÇÃO
+  #Defina depuraçãoDenuncie(erro) ((erro) ? (Vazio)0 : _assert(#erro, __ARQUIVO__, __LINHA__))
+#Senão
+  #Defina depuraçãoDenuncie(_Expressão) ((Vazio)0)
+#FimSe
+
+#FimSe
