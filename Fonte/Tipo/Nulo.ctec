@@ -1,3 +1,6 @@
-#SeNãoDefinido NULO
-#Defina	NULO ((Vazio*)0)
+#SeNãoDefinido CONVENCIONAL_TIPO_NULO
+#Defina CONVENCIONAL_TIPO_NULO
+
+#Defina NULO ((Vazio*)0)
+
 #FimSe

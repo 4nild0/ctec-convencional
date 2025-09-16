@@ -1,0 +1,136 @@
+#Inclua "Texto.ctec"
+#Inclua "Inteiro.ctec"
+#Inclua "Memoria.ctec"
+
+#SeNãoDefinido CONVENCIONAL_TIPO_ARQUIVO
+#Defina CONVENCIONAL_TIPO_ARQUIVO
+
+/* --- Tipo Arquivo --- */
+Tipo Estrutura Arquivo {
+  Caractere *ponteiro;
+  Inteiro contador;
+  Caractere *base;
+  Inteiro descritor;
+  Inteiro nome;
+  Inteiro tamanho_caractere;
+  Inteiro tamanho_total_espaço;
+  Caractere *nome_temporário;
+} Arquivo;
+
+#Defina FIM_ARQUIVO (-1)
+Tipo Longo Longo Deslocamento;
+Tipo Longo Longo PosiçãoCursor;
+
+// Abrir e Fechar
+Importe Inteiro  fclose(Arquivo *_File);
+Importe Arquivo * fopen(Constante Caractere *_Filename, Constante Caractere *_Mode);
+Importe Arquivo *fopen64(Constante Caractere *filename, Constante Caractere *mode);
+Importe Arquivo * freopen(Constante Caractere *_Filename, Constante Caractere *_Mode, Arquivo *_File);
+
+// Leitura
+Importe Inteiro  fgetc(Arquivo *_File);
+Importe InteiroNatural16Bits  fgetwc(Arquivo *_File);
+Importe Caractere * fgets(Caractere *_Buf, Inteiro _MaxCount, Arquivo *_File);
+Importe Unicode * fgetws(Unicode *_Dst, Inteiro _SizeInWords, Arquivo *_File);
+Importe Tamanho  fread(Vazio *_DstBuf, Tamanho _ElementSize, Tamanho _Count, Arquivo *_File);
+Importe Inteiro  fscanf(Arquivo *_File, Constante Caractere *_Format, ...);
+Importe Inteiro  fwscanf(Arquivo *_File, Constante Unicode *_Format, ...);
+
+Importe Inteiro  getc(Arquivo *_File);
+Importe InteiroNatural16Bits  getwc(Arquivo *_File);
+Importe Inteiro  ungetc(Inteiro _Ch, Arquivo *_File);
+Importe InteiroNatural16Bits  ungetwc(InteiroNatural16Bits _Ch, Arquivo *_File);
+
+// Escrita
+Importe Inteiro  fputc(Inteiro _Ch, Arquivo *_File);
+Importe InteiroNatural16Bits  fputwc(Unicode _Ch, Arquivo *_File);
+Importe Inteiro  fputs(Constante Caractere *_Str, Arquivo *_File);
+Importe Inteiro  fputws(Constante Unicode *_Str, Arquivo *_File);
+Importe Inteiro  fprintf(Arquivo *_File, Constante Caractere *_Format, ...);
+Importe Inteiro  vfprintf(Arquivo *_File, Constante Caractere *_Format, va_list _ArgList);
+Importe Tamanho  fwrite(Constante Vazio *_Str, Tamanho _Size, Tamanho _Count, Arquivo *_File);
+
+Importe Inteiro  putc(Inteiro _Ch, Arquivo *_File);
+Importe InteiroNatural16Bits  putwc(Unicode _Ch, Arquivo *_File);
+
+// Navegação
+Importe Inteiro  fgetpos(Arquivo *_File , PosiçãoCursor *_Pos);
+Importe Inteiro  fseek(Arquivo *_File, Longo _Offset, Inteiro _Origin);
+Importe Inteiro fseeko64(Arquivo* stream, Deslocamento offset, Inteiro whence);
+Importe Longo  ftell(Arquivo *_File);
+Importe Deslocamento ftello64(Arquivo * stream);
+Importe Inteiro  fsetpos(Arquivo *_File, Constante PosiçãoCursor *_Pos);
+Importe Vazio  rewind(Arquivo *_File);
+
+// Armazenamento
+Importe Inteiro  fflush(Arquivo *_File);
+Importe Vazio  setbuf(Arquivo *_File, Caractere *_Buffer);
+Importe Inteiro  setvbuf(Arquivo *_File, Caractere *_Buf, Inteiro _Mode, Tamanho _Size);
+
+// Estado
+Importe Vazio  clearerr(Arquivo *_File);
+Importe Inteiro  feof(Arquivo *_File);
+Importe Inteiro  ferror(Arquivo *_File);
+
+// Temporário
+Importe Arquivo * tmpfile(Vazio);
+Importe Caractere * tmpnam(Caractere *_Buffer);
+
+/* --- Traduções em Português (Snake Case com Verbos Imperativos) --- */
+
+// Abrir e Fechar
+#Defina feche_arquivo fclose
+#Defina abra_arquivo fopen
+#Defina abra_arquivo_64 fopen64
+#Defina reabra_arquivo freopen
+
+// Leitura
+#Defina leia_caractere fgetc
+#Defina leia_caractere_unicode fgetwc
+#Defina leia_linha fgets
+#Defina leia_linha_unicode fgetws
+#Defina leia_dados fread
+#Defina leia_formatado fscanf
+#Defina leia_formatado_unicode fwscanf
+
+#Defina obtenha_caractere getc
+#Defina obtenha_caractere_unicode getwc
+#Defina devolva_caractere ungetc
+#Defina devolva_caractere_unicode ungetwc
+
+// Escrita
+#Defina escreva_caractere fputc
+#Defina escreva_caractere_unicode fputwc
+#Defina escreva_linha fputs
+#Defina escreva_linha_unicode fputws
+#Defina escreva_formatado fprintf
+#Defina escreva_formatado_variável vfprintf
+#Defina escreva_dados fwrite
+
+#Defina insira_caractere putc
+#Defina insira_caractere_unicode putwc
+
+// Navegação
+#Defina obtenha_posição fgetpos
+#Defina mova_cursor fseek
+#Defina mova_cursor_64 fseeko64
+#Defina obtenha_posição_cursor ftell
+#Defina obtenha_posição_cursor_64 ftello64
+#Defina defina_posição fsetpos
+#Defina reinicie_cursor rewind
+
+// Armazenamento
+#Defina descarregue_buffer fflush
+#Defina defina_buffer setbuf
+#Defina configure_buffer setvbuf
+
+// Estado
+#Defina limpe_erro clearerr
+#Defina verifique_fim_arquivo feof
+#Defina verifique_erro ferror
+
+// Temporário
+#Defina crie_arquivo_temporário tmpfile
+#Defina gere_nome_temporário tmpnam
+
+#FimSe

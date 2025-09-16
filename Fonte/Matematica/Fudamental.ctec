@@ -1,0 +1,9 @@
+#SeNãoDefinido MATEMÁTICA_FUNDAMENTAL
+#Defina MATEMÁTICA_FUNDAMENTAL
+
+Inteiro some();
+Inteiro subtraia();
+Inteiro divida();
+Inteiro multiplique();
+
+#FimSe

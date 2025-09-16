@@ -1,0 +1,33 @@
+#Inclua "Texto.ctec"
+#Inclua "ArgumentoVariadico.ctec"
+
+#SeNãoDefinido CONVENCIONAL_MEMÓRIA
+#Defina CONVENCIONAL_MEMÓRIA
+
+/* --- Tipos de tamanho --- */
+Tipo __SIZE_TYPE__ Tamanho;
+Tipo __PTRDIFF_TYPE__ Diferença;
+
+/* --- Funções de alocação e utilitários --- */
+Vazio *aloque(Tamanho tamanho);
+#Defina obtenha_deslocamento(tipo, campo) ((Tamanho)&((tipo *)0)->campo)
+
+/* --- Limite máximo de tamanho --- */
+#SeNãoDefinido TAMANHO_MÁXIMO
+  #SeDefinido _WIN64
+    #Defina TAMANHO_MÁXIMO INTEIRO_NATURAL_64_MÁXIMO
+  #Senão
+    #Defina TAMANHO_MÁXIMO INTEIRO_NATURAL_32_MÁXIMO
+  #FimSe
+#FimSe
+
+// Leitura
+Importe Inteiro sscanf(Constante Caractere *_Src, Constante Caractere *_Format, ...);
+Importe Inteiro swscanf(Constante Unicode *_Src, Constante Unicode *_Format, ...);  
+
+// Escrita
+Importe Inteiro sprintf(Caractere *_Dest, Constante Caractere *_Format, ...);
+Importe Inteiro vsnprintf(Caractere *_DstBuf, Tamanho _MaxCount, Constante Caractere *_Format, ListaArgumentos _ArgList);
+Importe Inteiro vsprintf(Caractere *_Dest, Constante Caractere *_Format, ListaArgumentos _Args);
+  
+#FimSe

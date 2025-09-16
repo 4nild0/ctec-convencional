@@ -1,5 +1,7 @@
-#SeNãoDefinido LÓGICO
-#Defina LÓGICO
+#SeNãoDefinido CONVENCIONAL_TIPO_LÓGICO
+#Defina CONVENCIONAL_TIPO_LÓGICO
 
-#Defina VERDADEIRO	1
-#Defina FALSO		0
+#Defina Verdadeiro 1
+#Defina Falso 0
+
+#FimSe

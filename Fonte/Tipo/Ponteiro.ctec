@@ -1,0 +1,35 @@
+#SeNãoDefinido CONVENCIONAL_TIPO_PONTEIRO
+#Defina CONVENCIONAL_TIPO_PONTEIRO
+
+#Inclua "Inteiro.ctec"
+
+/* --- Tipos de ponteiro --- */
+Tipo __PTRDIFF_TYPE__ DiferençaEntrePonteiros;
+Tipo __PTRDIFF_TYPE__ PonteiroBilateral;
+Tipo __SIZE_TYPE__ PonteiroNatural;
+
+/* --- Limites de ponteiros por plataforma --- */
+#SeDefinido _WIN64
+  /* Windows 64-bit */
+  #Defina PONTEIRO_MÍNIMO    INTEIRO_BILATERAL_64_MÍNIMO
+  #Defina PONTEIRO_MÁXIMO    INTEIRO_BILATERAL_64_MÁXIMO
+  #Defina PONTEIRO_NATURAL_MÁXIMO INTEIRO_NATURAL_64_MÁXIMO
+#Senão
+  #SeDefinido __LP64__
+    /* Unix-like 64-bit (LP64) */
+    #Defina PONTEIRO_MÍNIMO    INTEIRO_BILATERAL_64_MÍNIMO
+    #Defina PONTEIRO_MÁXIMO    INTEIRO_BILATERAL_64_MÁXIMO
+    #Defina PONTEIRO_NATURAL_MÁXIMO INTEIRO_NATURAL_64_MÁXIMO
+  #Senão
+    /* Plataformas 32-bit */
+    #Defina PONTEIRO_MÍNIMO    INTEIRO_BILATERAL_32_MÍNIMO
+    #Defina PONTEIRO_MÁXIMO    INTEIRO_BILATERAL_32_MÁXIMO
+    #Defina PONTEIRO_NATURAL_MÁXIMO INTEIRO_NATURAL_32_MÁXIMO
+  #FimSe
+#FimSe
+
+/* --- Limites de DiferençaEntrePonteiros --- */
+#Defina DIFERENÇA_ENTRE_PONTEIROS_MÍNIMO PONTEIRO_MÍNIMO
+#Defina DIFERENÇA_ENTRE_PONTEIROS_MÁXIMO PONTEIRO_MÁXIMO
+
+#FimSe

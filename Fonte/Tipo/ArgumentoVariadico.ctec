@@ -1,0 +1,73 @@
+#SeNãoDefinido CONVENCIONAL_TIPO_ARGUMENTO_VARIÁDICO
+#Defina CONVENCIONAL_TIPO_ARGUMENTO_VARIÁDICO
+
+#Defina ListaArgumentos va_list
+#Defina ListaArgumentosViariádicos __va_list_struct
+
+#SeNãoDefinido PREPROCESSADORES_VARIÁDICOS
+#Defina PREPROCESSADORES_VARIÁDICOS
+
+#SeDefinido __x86_64__
+#SeNãoDefinido _WIN64
+
+Tipo Estrutura {
+    Natural Inteiro deslocamento_registrador_proposito_geral;
+    Natural Inteiro deslocamento_registrador_ponto_flutuante;
+    União {
+        Natural Inteiro deslocamento_excedente;
+        Caractere *área_argumento_excedente;
+    };
+    Caractere *área_registradores_salvos;
+} ListaArgumentosViariádicos;
+
+Vazio __va_start(ListaArgumentosViariádicos *lista, Vazio *ponteiro_frame);
+Vazio *__va_arg(ListaArgumentosViariádicos *lista, Inteiro tipo_argumento, Inteiro tamanho, Inteiro alinhamento);
+
+#Defina inicie_lista_argumentos(lista, último) __va_start(lista, __builtin_frame_address(0))
+#Defina argumento_variádico(lista, tipo) (*(tipo *)(__va_arg(lista, __builtin_va_arg_types(tipo), Meça(tipo), __alignof__(tipo))))
+#Defina copie_lista(destino, origem) (*(destino) = *(origem))
+#Defina finalize_lista(lista)
+
+#Defina _VA_LIST_T
+
+#Senão
+Tipo Caractere *ListaArgumentos;
+#Defina inicie_lista_argumentos(lista, último) __builtin_va_start(lista, último)
+#Defina argumento_variádico(lista, tipo) ((Meça(tipo) > 8 || (Meça(tipo) & (Meça(tipo)-1))) ? **(tipo **)((lista += 8) - 8) : *(tipo *)((lista += 8) - 8))
+#Defina copie_lista(destino, origem) ((destino) = (origem))
+#Defina finalize_lista(lista)
+#FimSe
+
+#SenãoSe __arm__
+Tipo Caractere *ListaArgumentos;
+#Defina _alinhamento_tipo(tipo) ((Inteiro)&((Estrutura {Caractere caracter; tipo x;} *)0)->x)
+#Defina _alinhe_endereço(endereço, tipo) (((Natural)endereço + _alinhamento_tipo(tipo) - 1) & ~(_alinhamento_tipo(tipo) - 1))
+#Defina inicie_lista_argumentos(lista, último) lista = ((Caractere *)&(último)) + ((Meça(último)+3)&~3)
+#Defina argumento_variádico(lista, tipo) (lista = (Vazio *) ((_alinhe_endereço(lista, tipo)+Meça(tipo)+3) &~3), *(tipo *)(lista - ((Meça(tipo)+3)&~3)))
+#Defina copie_lista(destino, origem) (destino) = (origem)
+#Defina finalize_lista(lista)
+
+#SenãoSe Definido(__aarch64__)
+Tipo Estrutura {
+    Vazio *__pilha;
+    Vazio *__topo_registrador_proposito_geral;
+    Vazio *__topo_registrador_vetor;
+    Inteiro deslocamento_registrador_proposito_geral;
+    Inteiro deslocamento_registrador_vetor;
+} ListaArgumentos;
+#Defina inicie_lista_argumentos(lista, último) __va_start(lista, último)
+#Defina argumento_variádico(lista, tipo) __va_arg(lista, tipo)
+#Defina copie_lista(destino, origem) (destino) = (origem)
+#Defina finalize_lista(lista)
+
+#Senão
+Tipo Caractere *ListaArgumentos;
+#Defina inicie_lista_argumentos(lista, último) lista = ((Caractere *)&(último)) + ((Meça(último)+3)&~3)
+#Defina argumento_variádico(lista, tipo) (lista += (Meça(tipo)+3)&~3, *(tipo *)(lista - ((Meça(tipo)+3)&~3)))
+#Defina copie_lista(destino, origem) (destino) = (origem)
+#Defina finalize_lista(lista)
+#FimSe
+
+#FimSe // PREPROCESSADORES_VARIÁDICOS
+
+#FimSe // CONVENCIONAL_TIPO_ARGUMENTO_VARIÁDICO

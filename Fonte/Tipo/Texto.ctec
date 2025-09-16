@@ -1,0 +1,47 @@
+#Inclua "Inteiro.ctec"
+#Inclua "ArgumentoVariadico.ctec"
+
+#SeNãoDefinido CONVENCIONAL_TIPO_CARACTERE
+#Defina CONVENCIONAL_TIPO_CARACTERE
+
+/* --- Tipo Unicode --- */
+Tipo __WCHAR_TYPE__ Unicode;
+
+/* --- Limites de Unicode --- */
+#SeNãoDefinido UNICODE_MÍNIMO
+  #Defina UNICODE_MÍNIMO 0
+  #Defina UNICODE_MÁXIMO ((Unicode)-1)
+#FimSe
+
+
+// Escrita
+Importe Caractere * gets(Caractere *_Buffer);
+Importe Inteiro  getchar(Vazio);
+Importe InteiroNatural16Bits  getwchar(Vazio);
+Importe Inteiro  scanf(Constante Caractere *_Format, ...);
+Importe Inteiro  wscanf(Constante Unicode *_Format, ...);
+
+// Leitura
+Importe Inteiro  printf(Constante Caractere *_Format, ...);
+Importe Inteiro  putchar(Inteiro _Ch);
+Importe Inteiro  puts(Constante Caractere *_Str);
+Importe InteiroNatural16Bits  putwchar(Unicode _Ch);
+Importe Inteiro  vprintf(Constante Caractere *_Format, ListaArgumentos _ArgList);
+
+/* --- Traduções em Português (Snake Case com Verbos Imperativos) --- */
+
+// Entrada/Leitura
+#Defina escaneie_linha gets
+#Defina escaneie_caractere getchar
+#Defina escaneie_caractere_unicode getwchar
+#Defina escaneie_formatado scanf
+#Defina escaneie_formatado_unicode wscanf
+
+// Saída/Escrita
+#Defina imprima_formatado printf
+#Defina imprima_caractere putchar
+#Defina imprima_linha puts
+#Defina imprima_caractere_unicode putwchar
+#Defina imprima_formatado_variável vprintf
+
+#FimSe
